@@ -1,7 +1,7 @@
 export async function onRequest(context) {
   const { request, params } = context;
   const url = new URL(request.url);
-  const path = params.path.join('/');
+  const path = params.default.join('/');
   
   const targetUrl = `https://api.352287.xyz/${path}${url.search}`;
 
